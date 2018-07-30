@@ -3,4 +3,6 @@
     <color name="colorPrimary">#1e791a</color>
     <color name="colorPrimaryDark">#309f53</color>
     <color name="colorAccent">#309f53</color>
+
+    <color name="nysl_light">#FFFFFF</color>
 </resources>

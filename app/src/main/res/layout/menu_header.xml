@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="160dp"
-    android:background="@drawable/fireball"
+    android:background="@drawable/build"
     android:backgroundTintMode="src_atop"
     android:padding="14dp">
 
