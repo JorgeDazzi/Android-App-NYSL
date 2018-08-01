@@ -5,7 +5,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Query;
 import dazzi.com.nysl.utils.Settings;
-import dazzi.com.nysl.models.Matches;
+import dazzi.com.nysl.models.futApi.Matches;
 
 public interface FutAPI {
 

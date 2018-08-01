@@ -1,44 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatBalloon"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/chat_input_bg"
-    android:layout_margin="10dp"
-    app:cardCornerRadius="30dp">
+    android:layout_margin="1dp">
 
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
+    <android.support.v7.widget.CardView
+        android:id="@+id/chatCard"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="6dp">
+        android:layout_margin="5dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="6dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/nysl_light"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-
-        <TextView
-            android:id="@+id/chatMsg"
-            android:layout_width="match_parent"
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Oi!"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:padding="6dp">
 
-        <TextView
-            android:id="@+id/textView5"
-            android:textAlignment="textEnd"
-            android:layout_width="match_parent"
+
+            <TextView
+                android:id="@+id/chatMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Oi!"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/msgDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:padding="4dp"
+                android:text="jorge.dazzi@gmail.com # 9h30"
+                android:textAlignment="textEnd"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatMsg" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/chatCardYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/chat_bg_you"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:padding="4dp"
-            android:textSize="10sp"
-            android:text="jorge.dazzi@gmail.com # 9h30"
-            app:layout_constraintTop_toBottomOf="@+id/chatMsg"
-             />
-    </android.support.constraint.ConstraintLayout>
+            android:layout_marginLeft="1dp"
+            android:layout_marginStart="1dp"
+            android:padding="6dp">
 
 
-</android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/chatMsgYou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Oi!"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/msgDetailsYou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:padding="4dp"
+                android:text="jorge.dazzi@gmail.com # 9h30"
+                android:textAlignment="textEnd"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatMsgYou" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

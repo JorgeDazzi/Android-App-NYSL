@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#1e791a</color>
-    <color name="colorPrimaryDark">#309f53</color>
-    <color name="colorAccent">#309f53</color>
+    <color name="colorPrimary">#252224</color>
+    <color name="colorPrimaryDark">#252224</color>
+    <color name="colorAccent">#414041</color>
 
     <color name="nysl_light">#FFFFFF</color>
+    <color name="chat_bg_you">#b1f583</color>
+    <color name="font_green">#40D78D</color>
+
 </resources>

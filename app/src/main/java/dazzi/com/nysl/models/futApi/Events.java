@@ -1,4 +1,4 @@
-package dazzi.com.nysl.models;
+package dazzi.com.nysl.models.futApi;
 
 import java.text.DateFormat;
 import java.text.ParseException;

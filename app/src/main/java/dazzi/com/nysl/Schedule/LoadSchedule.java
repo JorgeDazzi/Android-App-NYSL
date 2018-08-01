@@ -4,16 +4,14 @@ import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.View;
 
 import java.util.ArrayList;
 
 import dazzi.com.nysl.FutAPI;
-import dazzi.com.nysl.R;
-import dazzi.com.nysl.RecyclerViewAdapter;
-import dazzi.com.nysl.models.Events;
-import dazzi.com.nysl.models.Match;
-import dazzi.com.nysl.models.Matches;
+import dazzi.com.nysl.RecyclerViews.RecyclerViewAdapter;
+import dazzi.com.nysl.models.futApi.Events;
+import dazzi.com.nysl.models.futApi.Match;
+import dazzi.com.nysl.models.futApi.Matches;
 import dazzi.com.nysl.utils.Date;
 import dazzi.com.nysl.utils.Settings;
 import retrofit2.Call;

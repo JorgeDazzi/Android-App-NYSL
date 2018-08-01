@@ -1,4 +1,4 @@
-package dazzi.com.nysl.models;
+package dazzi.com.nysl.models.futApi;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

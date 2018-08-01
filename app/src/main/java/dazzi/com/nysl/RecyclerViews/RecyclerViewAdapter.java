@@ -1,4 +1,4 @@
-package dazzi.com.nysl;
+package dazzi.com.nysl.RecyclerViews;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,8 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import dazzi.com.nysl.models.Events;
+import dazzi.com.nysl.R;
+import dazzi.com.nysl.models.futApi.Events;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -58,6 +59,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             viewHolder.homeTeamName.setText(events.get(position).teamHomeName);
             viewHolder.visitorTeamName.setText(events.get(position).teamVisitorName);
             viewHolder.gameTime.setText(events.get(position).getGameTime());
+
             viewHolder.gameMap.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(events.get(position).getGoogleMapLink()));
