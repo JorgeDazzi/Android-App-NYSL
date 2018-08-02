@@ -37,7 +37,7 @@
         android:layout_alignTop="@+id/visitor_img"
         android:text="home team"
         android:textSize="16sp"
-        android:textColor="@color/font_green"
+        android:textColor="@color/nysl_light"
         />
 
     <TextView
@@ -49,7 +49,7 @@
         android:layout_marginStart="59dp"
         android:text="visitor team"
         android:textSize="16sp"
-        android:textColor="@color/font_green"
+        android:textColor="@color/nysl_light"
         />
 
     <View
@@ -70,7 +70,7 @@
         android:layout_marginStart="8dp"
         android:text="9h30"
         android:textAlignment="center"
-        android:textColor="@color/font_green"
+        android:textColor="@color/nysl_light"
         android:textSize="16sp" />
 
     <ImageButton
