@@ -33,7 +33,8 @@ public class AppendChatMsg {
         fireMsg.put("timestamp", new Date().getTime());
         fireMsg.put("user", user.getEmail());
 
+        String key = this.msgsRef.push().getKey();
 
-        this.msgsRef.updateChildren(fireMsg);
+        this.msgsRef.child(key).setValue(fireMsg);
     }
 }

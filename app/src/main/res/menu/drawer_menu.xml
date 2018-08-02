@@ -5,7 +5,8 @@
     <item
         android:id="@+id/btn_menu_schedule"
         android:icon="@drawable/icon_menu_schedule"
-        android:title="Schedule" />
+        android:title="Schedule"
+        />
 
     <item
         android:id="@+id/btn_menu_home"

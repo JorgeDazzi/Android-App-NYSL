@@ -14,8 +14,8 @@
         android:layout_height="54dp"
         app:elevation="8dp"
         app:itemBackground="@color/colorAccent"
-        app:itemIconTint="@color/colorPrimaryDark"
-        app:itemTextColor="@color/font_green"
+        app:itemIconTint="@drawable/menu_color_selectors"
+        app:itemTextColor="@drawable/menu_color_selectors"
         app:menu="@menu/drawer_menu">
 
 

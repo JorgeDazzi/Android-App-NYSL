@@ -1,11 +1,14 @@
 package dazzi.com.nysl;
 
 import android.app.Activity;
+import android.content.res.ColorStateList;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -28,8 +31,7 @@ public class ChatActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        MenuBar menu = new MenuBar(ChatActivity.this, (BottomNavigationView) findViewById(R.id.mainMenu));
-
+        MenuBar menu = new MenuBar(ChatActivity.this, (BottomNavigationView) findViewById(R.id.mainMenu), 2);
 
         ReadChatMsgs mainChat = new ReadChatMsgs(this, (RecyclerView) findViewById(R.id.chatBody));
 

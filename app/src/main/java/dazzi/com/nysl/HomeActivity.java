@@ -35,7 +35,7 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home);
 
 
-        MenuBar menu = new MenuBar(HomeActivity.this, (BottomNavigationView) findViewById(R.id.mainMenu));
+        MenuBar menu = new MenuBar(HomeActivity.this, (BottomNavigationView) findViewById(R.id.mainMenu), 1);
 
         Log.i(TAG, "onCreate: "+ user.getUid());
         Log.i(TAG, "onCreate: "+ user.getEmail());

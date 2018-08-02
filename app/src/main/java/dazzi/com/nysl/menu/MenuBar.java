@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -28,16 +29,20 @@ public class MenuBar {
 
     private Activity currentAct;
     private BottomNavigationView menu;
+    private Menu internalMenu;
+    private MenuItem menuItem;
 
 
-
-
-
-    public MenuBar(Activity currentAct, BottomNavigationView menu) {
+    public MenuBar(Activity currentAct, BottomNavigationView menu, int iconIdCheck) {
 
         this.currentAct = currentAct;
         this.menu = menu;
         this.mappingMenu();
+
+
+        this.internalMenu = menu.getMenu();
+        this.menuItem = internalMenu.getItem(iconIdCheck);
+        this.menuItem.setChecked(true);
 
     }
 
@@ -46,6 +51,7 @@ public class MenuBar {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Log.i(TAG, "onNavigationItemSelected: received click here");
+
 
                 switch ( item.getItemId() ){
 
