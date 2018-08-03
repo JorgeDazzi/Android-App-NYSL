@@ -51,28 +51,34 @@ public class MenuBar {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Log.i(TAG, "onNavigationItemSelected: received click here");
-
+                Log.i(TAG, "onNavigationItemSelected: "+currentAct.getLocalClassName());
 
                 switch ( item.getItemId() ){
 
                     case R.id.btn_menu_home:
-                        currentAct.startActivity(new Intent(currentAct.getBaseContext(), HomeActivity.class));
-                        return true;
+                            if(! currentAct.getLocalClassName().equals("HomeActivity") ) {
+
+                                currentAct.startActivity(new Intent(currentAct.getBaseContext(), HomeActivity.class));
+                                return true;
+                            }
+                        break;
 
                     case R.id.btn_menu_schedule:
                         return true;
 
 
                     case R.id.btn_menu_chat:
-                        currentAct.startActivity(new Intent(currentAct.getBaseContext(), ChatActivity.class));
-                        return true;
+                            if(! currentAct.getLocalClassName().equals("ChatActivity") ) {
 
-
-                    default:
-                        return false;
+                                currentAct.startActivity(new Intent(currentAct.getBaseContext(), ChatActivity.class));
+                                return true;
+                            }
+                        break;
 
 
                 }
+
+                return false;
 
             }
         });
