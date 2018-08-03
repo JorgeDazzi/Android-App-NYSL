@@ -34,9 +34,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         signIn = findViewById(R.id.signIn);
@@ -69,6 +66,9 @@ public class MainActivity extends Activity {
             super.onStart();
 
             FirebaseUser currentUser = mAuth.getCurrentUser();
+            if (currentUser != null) {
+                startNyslApp();
+            }
 
         }
 
@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
                                 Log.d(TAG, "signInWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
 
-                                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                                startNyslApp();
 
                             } else {
                                 // If sign in fails, display a message to the user.
@@ -99,4 +99,10 @@ public class MainActivity extends Activity {
                         }
                     });
         }
+
+
+        private void startNyslApp(){
+            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+        }
     }
+
